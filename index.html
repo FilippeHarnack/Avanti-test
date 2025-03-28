@@ -3,58 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Responsivo</title>
+    <title>Minha Loja</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- Arquivo CSS externo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Barra promocional */
+        .promo-bar {
+            background-color: #007bff; /* Cor roxa */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #007bff; /* Azul */
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: white;
+        }
+        .search-bar {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px 15px;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+        }
+        .search-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Área do menu lateral + departamentos */
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* Botão Todas as Categorias */
+        .category-btn {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .category-btn:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Menu lateral */
+        .category-menu {
+            display: none;
+            background-color: white;
+            border: 1px solid #ddd;
+            position: absolute;
+            width: 250px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .category-menu a {
+            color: black;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        .category-menu a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Botões dos Departamentos */
+        .department-btn {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .department-btn:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Exibição do layout do Figma */
+        iframe {
+            border: none;
+            width: 100%;
+            height: 600px;
+        }
+    </style>
 </head>
 <body>
+    <!-- Barra promocional -->
+    <div class="promo-bar">
+        <span style="background-color: #168cd1; padding: 5px 10px; border-radius: 5px;">Ganhe R$100</span> no primeiro pedido. Use o cupom DESCONTO100
+    </div>
 
-    <!-- Header -->
-    <header class="bg-dark text-white text-center py-3">
-        <h1>Meu Projeto</h1>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero text-center py-5">
-        <h2>Bem-vindo ao nosso site</h2>
-        <p>Conteúdo principal da página seguindo o layout do Figma.</p>
-        <button class="btn btn-primary">Saiba mais</button>
-    </section>
-
-    <!-- Cards (usando grid Bootstrap) -->
-    <section class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Título 1</h5>
-                        <p class="card-text">Descrição do card.</p>
-                    </div>
-                </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Minha Loja</a>
+            <div class="search-container">
+                <form class="d-flex">
+                    <input class="form-control search-bar" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-light ms-2" type="submit"><i class="fas fa-search"></i></button>
+                </form>
             </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Título 2</h5>
-                        <p class="card-text">Descrição do card.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Título 3</h5>
-                        <p class="card-text">Descrição do card.</p>
-                    </div>
-                </div>
+            <div>
+                <span class="text-white me-3">Olá, Nome do Cliente</span>
+                <a href="#perfil" class="btn btn-outline-light ms-2"><i class="fas fa-user"></i></a>
+                <a href="#carrinho" class="btn btn-outline-light ms-2"><i class="fas fa-shopping-cart"></i></a>
             </div>
         </div>
-    </section>
+    </nav>
+
+    <!-- Menu lateral e departamentos lado a lado -->
+    <div class="container position-relative">
+        <div class="menu-container">
+            <button class="category-btn" onclick="toggleCategories()">
+                <i class="fas fa-bars"></i> Todas as Categorias <i class="fas fa-chevron-down"></i>
+            </button>
+            <button class="department-btn">Novidades</button>
+            <button class="department-btn">Promoções</button>
+            <button class="department-btn">Masculino</button>
+            <button class="department-btn">Feminino</button>
+            <button class="department-btn">Infantil</button>
+            <button class="department-btn">Acessórios</button>
+        </div>
+
+        <!-- Menu lateral dropdown -->
+        <div id="category-menu" class="category-menu">
+            <a href="#">Camisetas</a>
+            <a href="#">Casacos</a>
+            <a href="#">Sapatos</a>
+            <a href="#">Acessórios</a>
+            <a href="#">Moda Feminina</a>
+            <a href="#">Moda Masculina</a>
+        </div>
+    </div>
+
+    <!-- Exibição do layout do Figma via iFrame -->
+    <iframe src="https://www.figma.com/proto/DqtFxC6312M32mLt8FpJjq/innovation-class?page-id=13%3A673&node-id=13-920&viewport=346%2C140%2C0.11&t=HyGGDSs83f1vbqMJ-1&scaling=scale-down&content-scaling=fixed" allowfullscreen></iframe>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-4">
-        <p>&copy; 2025 Meu Projeto. Todos os direitos reservados.</p>
+    <footer class="text-center py-3 mt-4">
+        <p>&copy; 2025 Minha Loja. Todos os direitos reservados.</p>
     </footer>
 
+    <script>
+        function toggleCategories() {
+            var menu = document.getElementById("category-menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
