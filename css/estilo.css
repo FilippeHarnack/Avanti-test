@@ -23,11 +23,3 @@ body {
     }
 }
 
-.carousel {
-    max-height: 400px; /* Ajuste a altura conforme necessário */
-}
-
-.carousel-item img {
-    object-fit: contain; /* Ou 'cover' dependendo do efeito desejado */
-    max-height: 400px; /* Deve ser a mesma altura do carrossel */
-}
