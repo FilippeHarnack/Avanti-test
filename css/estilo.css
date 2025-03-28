@@ -1,25 +1,143 @@
 body {
     font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
-.hero {
-    background: #f8f9fa;
+/* Barra promocional */
+.promo-bar {
+    background-color: #0d66c5;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
-.card {
-    margin-top: 20px;
-    border-radius: 8px;
+/* Navbar */
+.navbar {
+    background-color: #007bff;
+    padding: 15px 20px;
+}
+
+/* Centralizar Menu */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+.category-btn, .department-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-btn:hover, .department-btn:hover {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu lateral */
+.category-menu {
+    display: none;
+    background-color: white;
+    border: 1px solid #ddd;
+    position: absolute;
+    width: 250px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+}
+
+.category-menu a {
+    color: black;
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.category-menu a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Imagem de fundo */
+.hero {
+    background: url('https://via.placeholder.com/1600x600') no-repeat center center;
+    background-size: cover;
+    padding: 120px 0;
+    text-align: center;
+    color: white;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+/* Swiper (Carrossel) */
+.swiper-container {
+    width: 100%;
+    height: 300px;
+    margin-top: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide img {
+    border-radius: 10px;
 }
 
 /* Ajustes para mobile */
 @media (max-width: 768px) {
     .hero {
-        padding: 20px;
+        padding: 80px 0;
     }
-    
-    .card {
-        width: 100%;
+
+    .menu-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .category-btn, .department-btn {
+        padding: 10px 20px;
+    }
+
+    .swiper-container {
+        height: 250px;
     }
 }
 
+/* Efeitos nos botões */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Efeito de sombra no footer */
+footer {
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
