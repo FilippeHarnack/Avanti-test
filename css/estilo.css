@@ -18,6 +18,51 @@ body {
 .navbar {
     background-color: #007bff;
     padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar a navbar */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Barra de Pesquisa */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 500px;
+    padding-right: 40px; /* Espaço para a lupa */
+    padding-left: 10px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #007bff;
+    font-size: 1.2rem;
 }
 
 /* Centralizar Menu */
@@ -106,6 +151,7 @@ body {
 
 .swiper-slide img {
     border-radius: 10px;
+    object-fit: cover;
 }
 
 /* Ajustes para mobile */
@@ -121,10 +167,15 @@ body {
 
     .category-btn, .department-btn {
         padding: 10px 20px;
+        font-size: 1rem;
     }
 
     .swiper-container {
         height: 250px;
+    }
+
+    .search-bar-container {
+        width: 70%;
     }
 }
 
@@ -140,4 +191,11 @@ body {
 /* Efeito de sombra no footer */
 footer {
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
 }
