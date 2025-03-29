@@ -1,203 +1,165 @@
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-}
+body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #333; }
 
-/* Barra promocional */
-.promo-bar {
-    background-color: #0d66c5;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-/* Navbar */
-.navbar {
-    background-color: #007bff;
-    padding: 15px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar a navbar */
-}
-
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.navbar-brand {
-    color: white;
-    font-size: 1.5rem;
-}
-
-/* Barra de Pesquisa */
-.search-bar-container {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-}
-
-.search-bar {
-    width: 100%;
-    max-width: 500px;
-    padding-right: 40px; /* Espaço para a lupa */
-    padding-left: 10px;
-    font-size: 1rem;
-    border-radius: 25px;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.search-bar:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-.search-icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #007bff;
-    font-size: 1.2rem;
-}
-
-/* Centralizar Menu */
-.menu-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
-    font-size: 1.1rem;
-}
-
-.category-btn, .department-btn {
-    background-color: white;
-    color: black;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.category-btn:hover, .department-btn:hover {
-    background-color: #007bff;
-    color: white;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Menu lateral */
-.category-menu {
-    display: none;
-    background-color: white;
-    border: 1px solid #ddd;
-    position: absolute;
-    width: 250px;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 5px;
-}
-
-.category-menu a {
-    color: black;
-    padding: 12px;
-    display: block;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.category-menu a:hover {
-    background-color: #007bff;
-    color: white;
-}
-
-/* Imagem de fundo */
-.hero {
-    background: url('https://via.placeholder.com/1600x600') no-repeat center center;
+.promo-bar { background-color: #0d66c5; color: white; text-align: center; padding: 10px; font-weight: bold; }
+.navbar { background-color: #007bff; padding: 15px; display: flex; justify-content: center; align-items: center; gap: 30px; }
+.navbar-brand { color: white; font-size: 1.5rem; text-align: center; }
+.search-bar { width: 100%; max-width: 500px; }
+.navbar-icons { display: flex; align-items: center; gap: 20px; }
+.navbar-icons i { font-size: 1.5rem; color: white; cursor: pointer; position: relative; }
+.cart-count { position: absolute; top: -5px; right: -10px; background-color: red; color: white; font-size: 0.8rem; border-radius: 50%; padding: 2px 6px; }
+.profile-btn { color: white; font-size: 1rem; font-weight: bold; }
+.menu-container { display: flex; justify-content: center; gap: 20px; margin-top: 30px; flex-wrap: wrap; }
+.category-btn, .department-btn { background-color: transparent; color: black; border: 2px solid #007bff; padding: 12px 25px; font-weight: bold; border-radius: 25px; cursor: pointer; transition: all 0.3s ease; }
+.category-btn:hover, .department-btn:hover { background-color: #007bff; color: white; }
+.background-section {
+    background-image: url(https://lojashoebiz.vteximg.com.br/arquivos/ids/560140/banner_cat_jeans_roupas.png?v=638639099685930000);
     background-size: cover;
-    padding: 120px 0;
-    text-align: center;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
-.hero h1 {
-    font-size: 3rem;
+/* Estilo do carrossel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.carousel-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 15px;
+    color: white;
+    z-index: 10;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-top: 10px;
-}
-
-/* Swiper (Carrossel) */
 .swiper-container {
     width: 100%;
-    height: 300px;
+    height: 400px;  /* Ajuste da altura para dar mais espaço visual */
     margin-top: 50px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Melhorando as imagens do carrossel */
 .swiper-slide img {
+    width: 100%;
     border-radius: 10px;
-    object-fit: cover;
+    object-fit: cover; /* Assegura que a imagem se ajuste corretamente */
 }
 
-/* Ajustes para mobile */
+/* Setas de navegação */
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    color: #007bff;
+}
+
+/* Estilo da barra de pesquisa e do conteúdo do menu */
+.search-bar { width: 100%; max-width: 500px; }
+
+.products-container { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+    margin-top: 30px; 
+}
+
+.product-card { 
+    background: white; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    padding: 15px; 
+    transition: transform 0.3s ease; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 350px; 
+}
+
+.product-card:hover { 
+    transform: scale(1.05); 
+}
+
+.product-card img { 
+    width: 100%; 
+    border-radius: 10px; 
+}
+
+.product-card p { 
+    font-weight: bold; 
+    margin-top: 10px; 
+}
+
+.buy-button { 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    margin-top: auto; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background 0.3s ease; 
+    width: 100%; 
+}
+
+.buy-button:hover { 
+    background-color: #0056b3; 
+}
+
+footer { 
+    background-color: #007bff; 
+    color: white; 
+    padding: 10px; 
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
-    .hero {
-        padding: 80px 0;
-    }
-
-    .menu-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .category-btn, .department-btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-
     .swiper-container {
         height: 250px;
     }
 
-    .search-bar-container {
-        width: 70%;
+    .carousel-title {
+        font-size: 1.5rem;
     }
-}
 
-/* Efeitos nos botões */
-.btn {
-    transition: all 0.3s ease;
-}
+    .menu-container {
+        gap: 10px;
+    }
 
-.btn:hover {
-    transform: scale(1.05);
-}
-
-/* Efeito de sombra no footer */
-footer {
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer */
-footer {
-    background-color: #007bff;
-    color: white;
-    padding: 20px 10px; /* Aumentado o padding para dar mais espaçamento */
-    text-align: center;
-    font-size: 1rem;
+    .product-card {
+        height: 300px;
+    }
 }
