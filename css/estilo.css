@@ -163,3 +163,16 @@ footer {
         height: 300px;
     }
 }
+
+.section-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.section-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

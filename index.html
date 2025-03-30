@@ -226,19 +226,225 @@
         <button class="carousel-button-right" onclick="scrollRight()">&#8594;</button>
     </div>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 Minha Loja. Todos os direitos reservados.</p>
-    </footer>
+    <head>
+        <!-- Link para Font Awesome (para ícones modernos) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        
+        <!-- Link para Google Fonts (para uma fonte mais moderna) -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+        <style>
+            /* Definir a fonte moderna para todo o site */
+            body {
+                font-family: 'Poppins', sans-serif;
+                background-color: #f9f9f9; /* Cor de fundo suave para a página */
+                color: #333;
+            }
+    
+            /* Estilo para a seção principal */
+            .section-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 40px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+        
+            /* Estilo para cada item dentro da seção */
+            .section-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                flex-wrap: wrap;
+                width: 100%;
+                max-width: 1200px;
+                margin-bottom: 40px;
+            }
+        
+            /* Estilo para as imagens */
+            .section-image img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 15px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+    
+            .section-image img:hover {
+                transform: scale(1.05);
+                box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            }
+    
+            /* Estilo para o texto */
+            .section-text {
+                max-width: 350px;
+                text-align: left;
+                font-size: 18px;
+                color: #333;
+                font-weight: 400;
+            }
+    
+            /* Estilo para o título da seção */
+            h2 {
+                font-size: 28px;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 10px;
+                font-family: 'Poppins', sans-serif;
+            }
+    
+            /* Estilo para os parágrafos */
+            p {
+                font-size: 16px;
+                color: #555;
+                line-height: 1.6;
+                font-weight: 300;
+            }
+    
+            /* Estilo para o bloco de texto da imagem */
+            .text-overlay {
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+                margin-top: 10px;
+                background: rgba(0, 0, 0, 0.7);
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+            }
+    
+            /* Estilo dos ícones dos endereços */
+            .address-icon {
+                color: #2C3E50;
+                margin-right: 10px;
+                font-size: 18px;
+            }
+    
+            /* Estilo do endereço */
+            .address-list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                font-size: 16px;
+                color: #555;
+                text-align: left;
+                margin-top: 20px;
+            }
+    
+            /* Fundo da seção de endereços */
+            .section-address-background {
+                background-color: #f2f2f2; /* Cor suave, complementando a imagem */
+                padding: 40px 20px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="section-container">
+            <!-- Seção de Endereços com fundo -->
+            <div class="section-item section-address-background">
+                <div class="section-text">
+                    <h2>📍 Nossos Endereços</h2>
+                    <div class="address-list">
+                        <p><i class="fas fa-map-marker-alt address-icon"></i> Rua Exemplo, 123 - São Paulo, SP</p>
+                        <p><i class="fas fa-map-marker-alt address-icon"></i> Av. Modelo, 456 - Rio de Janeiro, RJ</p>
+                        <p><i class="fas fa-map-marker-alt address-icon"></i> Rua Fashion, 789 - Porto Alegre, RS</p>
+                        <p><i class="fas fa-map-marker-alt address-icon"></i> Rua da Moda, 101 - Curitiba, PR</p>
+                        <p><i class="fas fa-map-marker-alt address-icon"></i> Av. Estilo, 555 - Belo Horizonte, MG</p>
+                    </div>
+                </div>
+                <div class="section-image">
+                    <img src="https://img.freepik.com/fotos-premium/imagem-de-roupas-da-moda-penduradas-no-cabide-da-loja-de-roupas_249974-10152.jpg" alt="Localização">
+                </div>
+            </div>
+        
+            <!-- Seção de Imagem e Texto -->
+            <div class="section-item">
+                <div class="section-image">
+                    <img src="https://static.wixstatic.com/media/debfc7_aecccc5c30bb451c98e59bfb77ddad26~mv2.jpg/v1/fill/w_568,h_568,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/debfc7_aecccc5c30bb451c98e59bfb77ddad26~mv2.jpg" alt="Moda e estilo">
+                    <div class="text-overlay">Transforme seu look com as melhores peças da moda!</div>
+                </div>
+                <div class="section-text">
+                    <h2>🛍️ Moda que combina com você!</h2>
+                    <p>Descubra coleções exclusivas e monte looks incríveis com nossas peças. Estilo e qualidade em um só lugar!</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Link para o Bootstrap JS (necessário para alguns componentes interativos, caso precise) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+    
+    
+    <!-- Produtos com Carrossel -->
+<div class="container products-container-wrapper">
+    <h2 class="launch-title">Lançamentos</h2>
+    <div class="products-container">
+        <div class="product-card">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.JeiDNNFWMhf-4XYJrlfXEQHaHa&w=474&h=474&c=7" alt="Camisa Casual">
+            <p>Camisa Casual - R$59,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+        <div class="product-card">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.nHiVeKnHoX8uNjSPB1j35wHaIl&w=474&h=474&c=7" alt="Calça Jeans">
+            <p>Calça Jeans - R$89,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+        <div class="product-card">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.w3x84ih0GVkUbRgXzM_VwAHaLH&w=474&h=474&c=7" alt="Vestido Floral">
+            <p>Vestido Floral - R$119,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+        <div class="product-card">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.tM7rfu1f-K82mtoVpSvu7gHaHa&w=474&h=474&c=7" alt="Jaqueta de Couro">
+            <p>Jaqueta de Couro - R$199,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+        <div class="product-card">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.8Ev7IxVkItsgffPoppXw0AHaHa&w=474&h=474&c=7" alt="Tênis Esportivo">
+            <p>Tênis Esportivo - R$149,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+    </div>
+  
 
-    <script>
-        function scrollRight() {
-            document.querySelector('.products-container').scrollBy({ left: 300, behavior: 'smooth' });
-        }
+   <!-- Rodapé -->
+   <footer class="footer-container">
+    <div class="footer-links">
+        <a href="#">Sobre Nós</a>
+        <a href="#">Trabalhe Conosco</a>
+        <a href="#">Política de Privacidade</a>
+    </div>
+    <div class="footer-icons">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-linkedin"></i>
+    </div>
+    <div>
+        <p>Formas de Pagamento:</p>
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+    </div>
+</footer>
 
-        function scrollLeft() {
-            document.querySelector('.products-container').scrollBy({ left: -300, behavior: 'smooth' });
-        }
-    </script>
+<script>
+    function scrollRight() {
+        document.querySelector('.products-container').scrollBy({ left: 300, behavior: 'smooth' });
+    }
+
+    function scrollLeft() {
+        document.querySelector('.products-container').scrollBy({ left: -300, behavior: 'smooth' });
+    }
+</script>
 </body>
 </html>
