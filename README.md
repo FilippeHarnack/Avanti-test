@@ -9,9 +9,9 @@ HTML5 → Estruturação semântica do conteúdo
 
 CSS3 → Estilização e responsividade do layout
 
-JavaScript (ES6+) → Interatividade e manipulação do DOM
+JavaScript  → Interatividade e manipulação do DOM
 
-Framework CSS → (Exemplo: Bootstrap, Bulma ou outro) para estilização otimizada
+Framework CSS → (Exemplo: Bootstrap) para estilização otimizada
 
 Biblioteca de Carrossel → Para navegação entre os cards
 
