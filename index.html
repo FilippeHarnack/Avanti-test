@@ -384,7 +384,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
     
-    
     <!-- Produtos com Carrossel -->
 <div class="container products-container-wrapper">
     <h2 class="launch-title">Lançamentos</h2>
@@ -415,10 +414,21 @@
             <button class="buy-button">Comprar</button>
         </div>
     </div>
-  
+</div>
 
-   <!-- Rodapé -->
-   <footer class="footer-container">
+<!-- Imagem de fundo entre o container de produtos e o rodapé -->
+<div class="background-image-container">
+    <div class="background-section">
+        <p></p>
+    </div>
+</div>
+
+<!-- Seta à esquerda do segundo container de produtos -->
+<div class="left-arrow">
+    <i class="fas fa-chevron-left"></i>
+</div>
+
+<footer class="footer-container">
     <div class="footer-links">
         <a href="#">Sobre Nós</a>
         <a href="#">Trabalhe Conosco</a>
@@ -441,7 +451,6 @@
     function scrollRight() {
         document.querySelector('.products-container').scrollBy({ left: 300, behavior: 'smooth' });
     }
-
     function scrollLeft() {
         document.querySelector('.products-container').scrollBy({ left: -300, behavior: 'smooth' });
     }
