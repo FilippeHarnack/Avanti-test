@@ -1,33 +1,112 @@
-body {
-    font-family: 'Inter', sans-serif;
+/* Rodapé */
+.footer-container {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: auto;
+    color: white; /* Cor do texto no rodapé */
 }
 
-.hero {
-    background: #f8f9fa;
+.footer-container .footer-links a, 
+.footer-container .footer-icons i {
+    color: white; /* Cor branca para links e ícones */
 }
 
-.card {
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.footer-container .footer-links a:hover {
+    color: #007bff; /* Cor de hover para links */
 }
 
-/* Ajustes para mobile */
+.footer-container .footer-icons i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-container .footer-icons i:hover {
+    color: #007bff; /* Cor de hover para ícones */
+}
+
+/* Ícones de formas de pagamento */
+footer .fab.fa-cc-visa {
+    color: #1a1f71;
+}
+
+footer .fab.fa-cc-mastercard {
+    color: #f79c42;
+}
+
+footer .fab.fa-cc-paypal {
+    color: #009cde;
+}
+
+footer i {
+    font-size: 1.8rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer i:hover {
+    color: #ff3b30; /* Cor de hover para os ícones no rodapé */
+}
+
+/* Ajustes de responsividade */
 @media (max-width: 768px) {
-    .hero {
-        padding: 20px;
+    .swiper-container {
+        height: 250px;
     }
-    
-    .card {
-        width: 100%;
+
+    .carousel-title {
+        font-size: 1.5rem;
+    }
+
+    .menu-container {
+        gap: 10px;
+    }
+
+    .product-card {
+        height: 300px;
     }
 }
 
-.carousel {
-    max-height: 400px; /* Ajuste a altura conforme necessário */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar-icons {
+        gap: 15px;
+    }
+
+    .products-container {
+        flex-direction: column;
+    }
+
+    .product-card {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .background-image-container {
+        height: 200px;
+    }
 }
 
-.carousel-item img {
-    object-fit: contain; /* Ou 'cover' dependendo do efeito desejado */
-    max-height: 400px; /* Deve ser a mesma altura do carrossel */
+.footer-container .footer-links a {
+    color: white; /* Cor branca para os links */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-container .footer-links a:hover {
+    color: #007bff; /* Cor de hover (azul) para destacar */
+}
+
+.footer-container .footer-icons i {
+    color: white; /* Cor branca para os ícones de redes sociais e formas de pagamento */
+}
+
+.footer-container .footer-icons i:hover {
+    color: #007bff; /* Cor de hover (azul) para os ícones */
 }
